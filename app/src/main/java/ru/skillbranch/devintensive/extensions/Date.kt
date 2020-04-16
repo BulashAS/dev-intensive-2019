@@ -23,6 +23,10 @@ fun Date.add(value: Int, units: TimeUnits = TimeUnits.SECOND): Date {
     return this
 }
 
+fun Date.humanizeDiff(date: Date=Date()): String {
+    kotlin.TODO()
+}
+
 enum class TimeUnits {
     SECOND, MINUTE, HOUR, DAY
 }

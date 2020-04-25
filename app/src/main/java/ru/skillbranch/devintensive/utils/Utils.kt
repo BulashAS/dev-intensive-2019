@@ -28,12 +28,8 @@ object Utils {
         return words.joinToString(separator = divider)
     }
 
-    /*Реализуй метод Utils.toInitials(firstName lastName) принимающий в качестве аргументов имя и фамилию пользователя (null, пустую строку)
-     и возвращающий строку с первыми буквами имени и фамилии в верхнем регистре (если один из аргументов null то вернуть один инициал,
-     если оба аргумента null вернуть null)*/
     fun toInitials(firstName: String?, lastName: String?): String? {
         val f: String =
-            //"${if (firstName.isNullOrBlank()) "" else firstName.capitalize()[0].toString()}${if (lastName.isNullOrBlank()) "" else lastName.capitalize()[0].toString()}"
             "${if (firstName.isNullOrBlank()) "" else firstName[0].toUpperCase()}${if (lastName.isNullOrBlank()) "" else lastName[0].toUpperCase()}"
         return if (f.isEmpty()) null else f
     }
